@@ -15,7 +15,8 @@ sap-production-order-sql には、sqlの設定ファイルとして、以下の�
 
 * sap-production-order-sql-general-data.sql  
 * sap-production-order-sql-status-data.sql  
-* sap-production-order-sql-bom-data.sql
+* sap-production-order-sql-bom-data.sql  
+* sap-production-order-sql-bill-of-operations-data.sql  
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法  
 

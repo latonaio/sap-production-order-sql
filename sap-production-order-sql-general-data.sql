@@ -15,6 +15,6 @@ CREATE TABLE `sap-production-order-general-data`
     `StorageLocation`       varchar(4) DEFAULT NULL,
     `Batch`                 varchar(10) DEFAULT NULL,
     `ProductionUnit`        varchar(3) DEFAULT NULL,
-    PRIMARY KEY (`ManufacturingOrder`),
+    PRIMARY KEY (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

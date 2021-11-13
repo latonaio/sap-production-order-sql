@@ -13,10 +13,10 @@ https://api.sap.com/api/OP_API_PRODUCTION_ORDER_2_SRV_0001/overview
 
 sap-production-order-sql には、sqlの設定ファイルとして、以下のファイルが含まれています。  
 
-* sap-production-order-sql-general-data.sql  
-* sap-production-order-sql-status-data.sql  
-* sap-production-order-sql-bom-data.sql  
-* sap-production-order-sql-bill-of-operations-data.sql  
+* sap-production-order-sql-general-data.sql（SAP 製造指図 - 一般データ）  
+* sap-production-order-sql-status-data.sql（SAP 製造指図 - ステータスデータ）  
+* sap-production-order-sql-bom-data.sql（SAP 製造指図 - 部品表データ）  
+* sap-production-order-sql-bill-of-operations-data.sql（SAP 製造指図 - 作業手順データ）  
 
 ## MySQLのセットアップ / Kubernetesの設定 / SQLテーブルの作成方法  
 

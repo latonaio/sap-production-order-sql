@@ -26,7 +26,7 @@ CREATE TABLE `sap-production-order-bill-of-operations-data`
     `OpPlannedTotalQuantity` varchar(13) DEFAULT NULL,
     `OpTotalConfirmedYieldQty` varchar(13) DEFAULT NULL,
     `LastChangeDateTime`    datetime DEFAULT NULL,
-    PRIMARY KEY (`ManufacturingOrder`, `OrderInternalBillOfOperations` `OrderIntBillOfOperationsItem`)
+    PRIMARY KEY (`ManufacturingOrder`, `OrderInternalBillOfOperations`, `OrderIntBillOfOperationsItem`),
     CONSTRAINT `ManufacturingOrder_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap-production-order-general-data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

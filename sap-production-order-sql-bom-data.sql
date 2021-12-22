@@ -20,7 +20,7 @@ CREATE TABLE `sap-production-order-bom-data`
     `MatlCompIsMarkedForBackflush` tinyint(1) DEFAULT NULL,
     `StorageLocation`       varchar(4) DEFAULT NULL,
     `GoodsMovementType`     varchar(3) DEFAULT NULL,
-    PRIMARY KEY (`ManufacturingOrder`, `BillOfMaterialItemNumber`)
+    PRIMARY KEY (`ManufacturingOrder`, `BillOfMaterialItemNumber`),
     CONSTRAINT `ManufacturingOrder_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap-production-order-general-data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

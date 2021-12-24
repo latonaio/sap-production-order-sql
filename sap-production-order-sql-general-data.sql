@@ -1,6 +1,6 @@
 CREATE TABLE `sap-production-order-general-data`
 (
-    `ManufacturingOrder`    varchar(12) DEFAULT NULL,
+    `ManufacturingOrder`    varchar(12) NOT NULL,
     `ManufacturingOrderType` varchar(4) DEFAULT NULL,
     `Material`              varchar(40) DEFAULT NULL,
     `ProductionPlant`       varchar(4) DEFAULT NULL,

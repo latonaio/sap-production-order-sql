@@ -1,8 +1,8 @@
 CREATE TABLE `sap-production-order-bill-of-operations-data`
 (
-    `ManufacturingOrder`    varchar(12) DEFAULT NULL,
-    `OrderInternalBillOfOperations` varchar(8) DEFAULT NULL,
-    `OrderIntBillOfOperationsItem` varchar(4) DEFAULT NULL,
+    `ManufacturingOrder`    varchar(12) NOT NULL,
+    `OrderInternalBillOfOperations` varchar(8) NOT NULL,
+    `OrderIntBillOfOperationsItem` varchar(4) NOT NULL,
     `ManufacturingOrderSequence` varchar(6) DEFAULT NULL,
     `MfgOrderOperationText` varchar(40) DEFAULT NULL,
     `OperationIsReleased`   tinyint(1) DEFAULT NULL,

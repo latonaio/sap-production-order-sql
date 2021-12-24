@@ -1,7 +1,7 @@
 CREATE TABLE `sap-production-order-bom-data`
 (
-    `ManufacturingOrder`    varchar(12) DEFAULT NULL,
-    `BillOfMaterialItemNumber` varchar(4) DEFAULT NULL,
+    `ManufacturingOrder`    varchar(12) NOT NULL,
+    `BillOfMaterialItemNumber` varchar(4) NOT NULL,
     `Component`              varchar(40) DEFAULT NULL,
     `Plant`                 varchar(4) DEFAULT NULL,
     `BaseUnit`              varchar(3) DEFAULT NULL,

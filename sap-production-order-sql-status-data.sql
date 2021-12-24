@@ -1,6 +1,6 @@
 CREATE TABLE `sap-production-order-status-data`
 (
-    `ManufacturingOrder`    varchar(12) DEFAULT NULL,
+    `ManufacturingOrder`    varchar(12) NOT NULL,
     `StatusCode`            varchar(40) DEFAULT NULL,
     `IsUserStatus`          tinyint(1) DEFAULT NULL,
     `StatusShortName`       varchar(40) DEFAULT NULL,

@@ -1,4 +1,4 @@
-CREATE TABLE `sap-production-order-status-data`
+CREATE TABLE `sap_production_order_status_data`
 (
     `ManufacturingOrder`    varchar(12) NOT NULL,
     `StatusCode`            varchar(40) DEFAULT NULL,
@@ -6,6 +6,6 @@ CREATE TABLE `sap-production-order-status-data`
     `StatusShortName`       varchar(40) DEFAULT NULL,
     `StatusName`            varchar(40) DEFAULT NULL,
     PRIMARY KEY (`ManufacturingOrder`),
-    CONSTRAINT `ManufacturingOrder_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap-production-order-general-data` (`ManufacturingOrder`)
+    CONSTRAINT `SAPProductionOrderStatusData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

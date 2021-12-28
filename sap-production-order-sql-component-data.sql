@@ -4,6 +4,7 @@ CREATE TABLE `sap_production_order_component_data`
   `ManufacturingOrderSequence`       varchar(6) NOT NULL,
   `ManufacturingOrderOperation`      varchar(4) NOT NULL,
   `OrderInternalBillOfOperations`    varchar(10) NOT NULL,
+  `BOMItem`                          varchar(8) NOT NULL,
   `Reservation`                      varchar(10) DEFAULT NULL,
   `ReservationItem`                  varchar(4) DEFAULT NULL,
   `MaterialGroup`                    varchar(9) DEFAULT NULL,
@@ -22,7 +23,6 @@ CREATE TABLE `sap_production_order_component_data`
   `SalesOrderItem`                   varchar(6) DEFAULT NULL,
   `SortField`                        varchar(10) DEFAULT NULL,
   `BillOfMaterialCategory`           varchar(1) DEFAULT NULL,
-  `BOMItem`                          varchar(8) DEFAULT NULL,
   `BOMItemCategory`                  varchar(1) DEFAULT NULL,
   `BillOfMaterialItemNumber`         varchar(4) DEFAULT NULL,
   `BOMItemDescription`               varchar(40) DEFAULT NULL,
@@ -51,7 +51,7 @@ CREATE TABLE `sap_production_order_component_data`
   `MaterialCompOriginalQuantity`     varchar(15) DEFAULT NULL,
   `Currency`                         varchar(5) DEFAULT NULL,
   `WithdrawnQuantityAmount`          varchar(16) DEFAULT NULL,
-    PRIMARY KEY (`ManufacturingOrder`, `ManufacturingOrderSequence`, `ManufacturingOrderOperation`, `OrderInternalBillOfOperations`),
+    PRIMARY KEY (`ManufacturingOrder`, `ManufacturingOrderSequence`, `ManufacturingOrderOperation`, `OrderInternalBillOfOperations`, `BOMItem`),
     CONSTRAINT `SAPProductionOrderComponentData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

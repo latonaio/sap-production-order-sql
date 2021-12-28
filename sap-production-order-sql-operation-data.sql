@@ -1,9 +1,9 @@
-CREATE TABLE `sap_production_order_bill_of_operations_data`
+CREATE TABLE `sap_production_order_operation_data`
 (
     `ManufacturingOrder`            varchar(12) NOT NULL,
     `OrderInternalBillOfOperations` varchar(8) NOT NULL,
     `OrderIntBillOfOperationsItem`  varchar(4) NOT NULL,
-    `ManufacturingOrderSequence`    varchar(6) DEFAULT NULL,
+    `ManufacturingOrderSequence`    varchar(6) NOT NULL,
     `MfgOrderOperationText`         varchar(40) DEFAULT NULL,
     `OperationIsReleased`           tinyint(1) DEFAULT NULL,
     `OperationIsConfirmed`          tinyint(1) DEFAULT NULL,
@@ -13,20 +13,21 @@ CREATE TABLE `sap_production_order_bill_of_operations_data`
     `OperationIsClosed`             tinyint(1) DEFAULT NULL,
     `ProductionPlant`               varchar(4) DEFAULT NULL,
     `WorkCenterInternalID`          varchar(8) DEFAULT NULL,
-    `OpErlstSchedldExecStrtDte`,    varchar(80) DEFAULT NULL,
-    `OpErlstSchedldExecStrtTme`,    varchar(80) DEFAULT NULL,
-    `OpErlstSchedldExecEndDte`,     varchar(80) DEFAULT NULL,
-    `OpErlstSchedldExecEndTme`,     varchar(80) DEFAULT NULL,
+    `OpErlstSchedldExecStrtDte`     varchar(80) DEFAULT NULL,
+    `OpErlstSchedldExecStrtTme`     varchar(80) DEFAULT NULL,
+    `OpErlstSchedldExecEndDte`      varchar(80) DEFAULT NULL,
+    `OpErlstSchedldExecEndTme`      varchar(80) DEFAULT NULL,
     `OpActualExecutionStartDate`    varchar(80) DEFAULT NULL,
     `OpActualExecutionStartTime`    varchar(80) DEFAULT NULL,
     `OpActualExecutionEndDate`      varchar(80) DEFAULT NULL,
     `OpActualExecutionEndTime`      varchar(80) DEFAULT NULL,
-    `OpActualExecutionDays`         varchar(3) DEFAULT NULL,
+    `ErlstSchedldExecDurnInWorkdays` int(32) DEFAULT NULL,
+    `OpActualExecutionDays`         int(32) DEFAULT NULL,
     `OperationUnit`                 varchar(3) DEFAULT NULL,
     `OpPlannedTotalQuantity`        varchar(13) DEFAULT NULL,
     `OpTotalConfirmedYieldQty`      varchar(13) DEFAULT NULL,
-    `LastChangeDateTime`            datetime DEFAULT NULL,
-    PRIMARY KEY (`ManufacturingOrder`, `OrderInternalBillOfOperations`, `OrderIntBillOfOperationsItem`),
-    CONSTRAINT `SAPProductionOrderBillOfOperationsData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
+    `LastChangeDateTime`            varchar(80) DEFAULT NULL,
+    PRIMARY KEY (`ManufacturingOrder`, `OrderInternalBillOfOperations`, `OrderIntBillOfOperationsItem`, `ManufacturingOrderSequence`),
+    CONSTRAINT `SAPProductionOrderOperationData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

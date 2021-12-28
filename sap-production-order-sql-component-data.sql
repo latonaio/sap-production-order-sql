@@ -1,4 +1,4 @@
-CREATE TABLE `sap_production_order_bom_data`
+CREATE TABLE `sap_production_order_component_data`
 (
     `ManufacturingOrder`           varchar(12) NOT NULL,
     `BillOfMaterialItemNumber`     varchar(4) NOT NULL,
@@ -21,6 +21,6 @@ CREATE TABLE `sap_production_order_bom_data`
     `StorageLocation`              varchar(4) DEFAULT NULL,
     `GoodsMovementType`            varchar(3) DEFAULT NULL,
     PRIMARY KEY (`ManufacturingOrder`, `BillOfMaterialItemNumber`),
-    CONSTRAINT `SAPProductionOrderBomData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
+    CONSTRAINT `SAPProductionOrderComponentData_fk` FOREIGN KEY (`ManufacturingOrder`) REFERENCES `sap_production_order_general_data` (`ManufacturingOrder`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
